@@ -1,0 +1,11 @@
+version: '3'
+services:
+  analytics:
+    container_name: analytics-engine
+    build: .
+    ports:
+      - "80:9090"
+    volumes:
+      - analytics-engine-vol:/app
+volumes:
+  analytics-engine-vol:
